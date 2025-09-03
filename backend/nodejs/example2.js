@@ -4,7 +4,7 @@ const db = require('some-database-module'); // This is a fake module for illustr
 
 // A highly vulnerable SQL injection endpoint
 router.get("/user", (req, res) => {
-    // This is UNSAFE! User input is directly concatenated into the query.
+    // This is UNSAFE! User input is directly concatenated into the query
     const userId = req.query.id;
     const query = `SELECT * FROM users WHERE id = ${userId}`; 
 
