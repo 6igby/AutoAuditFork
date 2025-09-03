@@ -1,0 +1,107 @@
+# ==================== #
+# Operating System Files #
+# ==================== #
+# Windows
+Thumbs.db
+.DS_Store
+*.lnk
+
+# ==================== #
+# Language Agnostic #
+# ==================== #
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# ==================== #
+# Node.js / JavaScript #
+# ==================== #
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.tgz
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==================== #
+# Python #
+# ==================== #
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# ==================== #
+# Docker #
+# ==================== #
+# Ignore Docker build logs (Docker itself is versioned via Dockerfile)
+docker-compose.*.yml
