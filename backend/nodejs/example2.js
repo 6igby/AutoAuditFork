@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('some-database-module'); // This is a fake module for illustration
 
+let noor = "noor";
 // A highly vulnerable SQL injection endpoint
 router.get("/user", (req, res) => {
     // This is UNSAFE! User input is directly concatenated into the query
