@@ -4,18 +4,22 @@ const db = require('some-database-module'); // This is a fake module for illustr
 
 let noor = "noor"  //added a linitng error - missing semicolon, double quotes, unused variables
 
-//Vulnerable SQL injection 
+
+// Create an in-memory database
+let db = new sqlite3.Database(':memory:');
+
+// ❌ Vulnerable SQL injection endpoint
 router.get("/user", (req, res) => {
     const userId = req.query.id;
 
-    //here i am allowing the user input directly into the database without any protection -> breaking security rules
+    // ❌ Direct string concatenation (vulnerable)
     const query = `SELECT * FROM users WHERE id = ${userId}`; 
 
-    db.query(query, (err, result) => {
+    db.all(query, [], (err, rows) => {
         if (err) {
             res.status(500).send('Error');
         } else {
-            res.json(result);
+            res.json(rows);
         }
     });
 });
